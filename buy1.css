@@ -1,0 +1,13 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  background-color: ghostwhite;
+}
+
+.fa-star{
+  color: orange;
+}
+
+form{
+  color: black;
+}

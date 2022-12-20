@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style2.css">
+  <link rel="icon" href="foto/logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, inital-scale 1.0">
+  <script src="https://kit.fontawesome.com/dd1776080c.js" crossorigin="anonymous"></script>
+  <title>Home</title>
+</head>
+<body>
+ <input type="checkbox">
+ <nav>
+  <div class="left-side">
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links">
+      <div class="nav-link-wrapper"><a href="home.html">Home</a></div>
+      <div class="nav-link-wrapper"><a href="stylish.html">Stylish</a></div>
+      <div class="nav-link-wrapper"><a href="about.html">About</a></div>
+      <div class="nav-link-wrapper"><a href="cart.html">Cart</a></div>
+      <div class="nav-link-wrapper"><a href="akunsaya.html">Account</a></div>
+      <div class="nav-link-wrapper"><a href="index2.html">Logout</a></div>
+    </div>
+  </div>
+</nav>
+
+<div class="welcome">
+  <h1>WELCOME TO</h1>
+  <img src="foto/logo.png" height="150" width="150">
+  <h1>MY BEOLS</h1>
+</div>
+
+<div class="social">
+  <a href="https://chat.whatsapp.com/GRgvCcr3N7VH1BGBVZjtUo"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://www.facebook.com/samuel.ebinego"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/accounts/login/?next=/samuel_ebit1313/"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.youtube.com/channel/UCzog1JW9Ds7_cKWwJEPpEug/videos"><i class="fab fa-youtube"></i></a>
+</div>
+<br>
+<br>
+<div class="kontak">
+  <center><h3>Admin Contact</h3>
+    <center><h3>Whatsapp : +62 895-0806-5875</h3>
+    </div>
+
+    <center><h2>Waktu Sekarang</h2></center>
+    <center><h2 style="font-size: 30px; font-family: arial;" id="jam"></h2></center>
+    <script type="text/javascript">
+      window.onload = function() { jam(); }
+      
+      function jam() {
+       var e = document.getElementById('jam'),
+       d = new Date(), h, m, s;
+       h = d.getHours();
+       m = set(d.getMinutes());
+       s = set(d.getSeconds());
+       
+       e.innerHTML = h +':'+ m +':'+ s;
+       
+       setTimeout('jam()', 1000);
+     }
+     
+     function set(e) {
+       e = e < 10 ? '0'+ e : e;
+       return e;
+     }
+   </script>
+
+ </body>
+ </html>

@@ -1,0 +1,253 @@
+body{
+  padding: 0px;
+  margin: 0px;
+}
+
+input{
+  display: none;
+}
+
+button{
+  color: gold;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.box{
+  background-color: gold;
+  color: blueviolet;
+  border-radius: 40px;
+  box-shadow: brown;
+}
+
+
+.welcome{
+  padding: 50px;
+  color: Black;
+  text-align: center;
+  font-family: sans-serif;
+  float: center;
+  background-color: white;
+  height: 250px;
+}
+
+.kontak{
+  font-size:20px;
+  background: linear-gradient(to right, #000 20%,
+    #FFD700 40%, #0052d4 60%, #000 80%);
+  background-size: 200% auto;
+  color: navajowhite;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate{
+  to{
+    background-position: 200% center;
+  }
+}
+
+nav a {
+  right:50px;
+  color: gold;
+  text-align: right;
+  padding: 30px;
+  text-decoration: none;
+  font-size: 20px; 
+  line-height: 25px;
+}
+
+nav{
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  background: indianred;
+  align-items: center;
+  min-height: 50px;
+  padding-left: 15px;
+  position: fixed;
+  width: 100%;
+  top:0;
+  font-style: italic;
+}
+
+nav .left-side .nav-links{
+  display: flex;
+}
+
+nav .left-side .nav-links a{
+  padding: 20px;
+  color: gold;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav .right-side h1{
+  padding-right: 40px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 800px){
+  nav .left-side .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 10px;
+    transition: 1s; /* nanti */
+  }
+
+
+  @media (max-width: 500px){
+    .welcome .container {
+      padding: 20px;
+      float: justify;
+      transition: 1s; /* nanti */
+      color: blueviolet;
+      background-color: goldenrod;
+      height: 200px;
+    }
+
+    .social{
+      top:50%;
+      right:0px;
+    }
+
+    .social a{
+      justify-content: center;
+      align-items: center;
+      width:40px;
+      height:40px;
+      margin:5px;
+      padding: 10px;
+      line-height:0px;
+      background-color:darkgreen;
+      border:2px solid #CBCBCB;
+      border-radius: 20px;
+      box-shadow:2px 2px 2px rgba(0,0,0,0.2);
+    }
+
+    .social a:hover{
+      background-color:indianred;
+      transition:all ease 0.5s;
+    }
+
+    .social i{
+      font-size:20px;
+      color:lightgoldenrodyellow;
+    }
+
+    input{
+      display: block;
+      position: absolute;
+      transform: scale(2.1);
+      margin-top: 28px;
+      margin-left: 27px;
+      opacity: 0;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    nav .left-side .nav-links{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+      flex-wrap: wrap;
+      transform: translate(100%);
+      transition: 0.7s;  /* nanti */
+    }
+
+    input:checked ~ nav .left-side .nav-links{
+      transform: translate(0%);
+    }
+
+    nav .left-side .nav-links a{
+      display: block;
+      padding: 15px;
+      margin: 5px;
+      transform: translate(-10000%);
+      transition: 0.4s;  /* nanti */
+    }
+
+    input:checked ~ nav .left-side .nav-links a{
+      transform: translate(0%);
+    }
+
+    input:checked ~ nav .left-side .hamburger span:nth-child(1){
+      transform-origin: 0 0;
+      transform: rotate(45deg);
+      margin-top: 5px;
+      background: gold;
+    }
+
+    input:checked ~ nav .left-side .hamburger span:nth-child(2){
+      transform: translate(-1000%);
+    }
+
+    input:checked ~ nav .left-side .hamburger span:nth-child(3){
+      transform-origin: 0 100%;
+      transform: rotate(-45deg);
+      margin-top: -1px;
+      background: gold;
+    }
+  }
+
+  #card-content {
+    padding: 12px 44px;
+  }
+  #card-title {
+    font-family: "Raleway Thin", sans-serif;
+    letter-spacing: 4px;
+    padding-bottom: 23px;
+    padding-top: 13px;
+    text-align: center;
+  }
+
+  .form {
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-border {
+    background: -webkit-linear-gradient(right, #a6f77b, #2ec06f);
+    height: 1px;
+    width: 100%;
+  }
+  .form-content {
+    background: #fbfbfb;
+    border: none;
+    outline: none;
+    padding-top: 14px;
+  }
+  .underline-title {
+    background: -webkit-linear-gradient(right, #a6f77b, #2ec06f);
+    height: 2px;
+    margin: -1.1rem auto 0 auto;
+    width: 89px;
+  }
+
+  #card {
+    background: #fbfbfb;
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+    height: 400px;
+    margin: 6rem auto 8.1rem auto;
+    width: 329px;
+  }
+  #card-content {
+    padding: 12px 44px;
+  }

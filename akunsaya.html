@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="akunsaya.css">
+  <link rel="icon" href="foto/logo.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, inital-scale 1.0">
+  <script src="https://kit.fontawesome.com/dd1776080c.js" crossorigin="anonymous"></script>
+  <title>Profile</title>
+</head>
+<body>
+ <input type="checkbox">
+ <nav>
+  <div class="left-side">
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links">
+      <div class="nav-link-wrapper"><a href="home.html">Home</a></div>
+      <div class="nav-link-wrapper"><a href="ubah.html">Change Password</a></div>
+      <div class="nav-link-wrapper"><a href="ubahfoto.html">Change Foto</a></div>
+      <div class="nav-link-wrapper"><a href="Cart.html">Cart</a></div>
+      <div class="nav-link-wrapper"><a href="index2.html">Logout</a></div>
+    </div>
+  </div>
+</nav>
+
+<article>
+  <div class="welcome">
+    <h1>WELCOME</h1>
+    <img src="foto/Sams.jpg" height="150" width="150">
+    <h1>Samuel</h1>
+  </div>
+</article>
+
+<div id="card">
+  <div id="card-content">
+    <div id="card-title">
+      <h4>Profile Akun</h4>
+      <div class="underline-title"></div>
+    </div>
+    <form method="post" class="form">
+      Username<label for="user-email" style="padding-top:13px">
+        &nbsp;Samuel
+      </label>
+      <input type="text" name="text" value="Samuel" placeholder="Samuel">
+      <div class="form-border"></div>
+      <br>
+      Email<label for="user-password" style="padding-top:22px">&nbsp;samuelaja@gmail.com
+      </label>
+      <input id="user-password" class="form-content" type="password" name="password"/>
+      <div class="form-border"></div>
+      <br>
+      Nomor Handphone<label for="user-password" style="padding-top:22px">&nbsp;+62895*********
+      </label>
+      <input id="user-password" class="form-content" type="text" name="text" />
+      <div class="form-border"></div>
+    </form>
+  </div>
+</div>
+<div class="social">
+  <center>
+    <a href="https://chat.whatsapp.com/GRgvCcr3N7VH1BGBVZjtUo"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.facebook.com/samuel.ebinego"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/accounts/login/?next=/samuel_ebit1313/"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com/channel/UCzog1JW9Ds7_cKWwJEPpEug/videos"><i class="fab fa-youtube"></i></a>
+  </center>
+</div>
+
+
+<br>
+<br>
+
+<div class="kontak">
+  <center><h2>Waktu Sekarang</h2></center>
+  <center><h2 style="font-size: 30px; font-family: arial;" id="jam"></h2></center>
+  <script type="text/javascript">
+    window.onload = function() { jam(); }
+
+    function jam() {
+     var e = document.getElementById('jam'),
+     d = new Date(), h, m, s;
+     h = d.getHours();
+     m = set(d.getMinutes());
+     s = set(d.getSeconds());
+
+     e.innerHTML = h +':'+ m +':'+ s;
+
+     setTimeout('jam()', 1000);
+   }
+
+   function set(e) {
+     e = e < 10 ? '0'+ e : e;
+     return e;
+   }
+ </script>
+</div>
+
+</body>
+</html>
